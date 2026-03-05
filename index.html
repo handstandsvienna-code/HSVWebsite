@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <!--<script src="cookies.js" defer></script>-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/HsvLogosquare_transparent_fixed.png">
+
+    <title>HandstandsVienna</title>
+</head>
+
+<body>
+    <!-- Cookie overlay/banner -->
+    <div id="cookie-overlay" class="cookie-overlay" aria-hidden="true"></div>
+    <div id="cookie-banner" class="cookie-container" role="dialog" aria-modal="true" aria-labelledby="cookie-title"
+        aria-describedby="cookie-desc">
+        <div class="cookie-content">
+            <h3>Datenschutz-Präferenzen</h3>
+            <p>
+                Für die Kursanmeldung nutzen wir ein externes Buchungssystem (Eversports).
+                Dabei werden technisch notwendige Cookies des Drittanbieters verwendet, um die Anmeldung zu
+                ermöglichen.
+                Ohne deine Zustimmung kann das Anmelde-Widget nicht geladen werden.
+                Deine Auswahl kannst du jederzeit über den Link am Ende der Website ändern.
+            </p>
+            <a href="assets/pdf/DatenschutzHsv1.pdf" target="_blank" rel="noopener noreferrer">Hier erfährst Du mehr
+                zu unseren Datenschutzbestimmungen</a>
+            <div class="cookie-buttons">
+                <button id="cookie-accept">Akzeptieren</button>
+                <button id="cookie-reject">Ablehnen</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <section class="landingPage">
+            <div class="section-container">
+                <div class="section-item">
+                    <img class="" src="assets/images/HsvLogosquare_transparent_noCircle.png" alt="Vereinslogo">
+                    <p>Wiens erster Verein, der sich auf das Erlernen von Handständen spezialisiert hat.
+                        <br>
+                        Egal, welches Level du hast - wir finden die richtigen Übungen für dich!
+                        <br>
+                        Auch komplette Anfänger sind bei uns herzlich willkommen!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="sellingPoint">
+            <div class="section-container">
+                <div class="section-item">
+                    <img src="assets/images/_DSC3465.jpg" alt="Eine Person im Handstand erhält Hilfestellung">
+                </div>
+                <div class="section-item">
+                    <h2>Deshalb solltest du zu uns kommen:</h2>
+                    <ul>
+                        <li>Wir bieten überschaubare Gruppengrößen von maximal 12 Personen</li>
+                        <li>Unser Hands-On Training erlaubt individuelles Feedback</li>
+                        <li>Jedes Handstand-Level ist willkommen!</li>
+                        <li>Theoretische Erklärungen erleichtern das Verständnis</li>
+                        <li>Praktische Übungen die ohne Equipment auch zu Hause durchgeführt werden können</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="infos">
+            <div class="section-container">
+                <div class="section-item">
+                    <h2>Preise:</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="probeTraining">Kostenloses Probetraining!</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Blockkarten ab</td>
+                                <td class="info-value"> €70,-</td>
+                            </tr>
+                            <tr>
+                                <td>Zeitkarten ab</td>
+                                <td class="info-value">€95,-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-item">
+                    <h2>Trainings:</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Montag</td>
+                                <td class="info-value">18:30h - 19:30h</td>
+                            </tr>
+                            <tr>
+                                <td>Donnerstag</td>
+                                <td class="info-value">18:30h - 19:30h</td>
+                            </tr>
+                            <tr>
+                                <td>Samstag</td>
+                                <td class="info-value">09:30h - 10:30h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="infosLocation">Wir trainieren in der <u>Josefstädter Straße 76, 1080 Wien</u> in den
+                Räumlichkeiten von CrossfitVienna!
+            </p>
+        </section>
+
+        <section class="jahrestrainingsplan">
+            <div class="section-container">
+                <div class="section-item">
+                    <div class="section-item">
+                        <h2>Unsere Schwerpunkte:</h2>
+                        <p class="infoSchwerpunkte">Diese Schwerpunkte ändern sich jeden Monat. Dadurch bleiben unsere
+                            Stunden interressant und
+                            ihr bekommt immer neuen Input. In der folgenden Tabelle findest du die Themen für diesen
+                            Monat:</p>
+                        <div class="jtpWrapper">
+                            <table>
+                                <h2 id="monatTitel"></h2>
+                                <tbody>
+                                    <tr>
+                                        <td>Montag</td>
+                                        <td id="montag" class="thema"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donnerstag</td>
+                                        <td id="donnerstag" class="thema"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samstag</td>
+                                        <td id="samstag" class="thema"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="eversports">
+            <div class="section-container">
+                <div class="section-item">
+                    <div class="section-item">
+                        <h2>Wir sind auch auf Eversports!</h2>
+                        <p>Mit dieser Übersicht kommst du direkt zur Anmeldung:</p>
+                        <div class="widgetWrapper">
+                            <div id="widgetWrapperId">
+                                <!--<div data-eversports-widget-id="fa96ca77-1129-4e00-b0b6-ce610c4325ef"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faqs">
+            <div class="section-container">
+                <div class="section-item">
+                    <h2>FAQs</h2>
+                    <p>Hier findest du häufig gestellte Fragen. Wenn du hier keine Antwort findest, dann schreib
+                        uns
+                        doch eine
+                        Mail!
+                        <span class="mail-wrapper">
+                            ➡ <a href="mailto:handstandsvienna@gmail.com">
+                                <img class="mailFaqs" src="assets/icons/icons8-email-50.png"
+                                    alt="Abbildung eines Briefs"></a> ⬅
+                        </span>
+                    </p>
+                    <div id="faq-container">
+                        <!-- FAQ Items werden hier per JS eingefügt -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div class="section-container" id="footer-section-container">
+                <div class="logo-div">
+                    <img id="hsv-logo" src="assets/images/HsvLogosquare_transparent_fixed.png" alt="Vereinslogo">
+                </div>
+                <nav>
+                    <a class="impressumLink" href="./impressum.html">Impressum</a>
+                    <div class="contacts">
+                        <a href="https://www.instagram.com/handstands.vienna/">
+                            <img class="ig" src="assets/icons/icons8-instagram-24.png"
+                                alt="Abbild des Instagram-logos"></a>
+                        <a href="mailto:handstandsvienna@gmail.com">
+                            <img class="mail" src="assets/icons/icons8-email-50.png" alt="Abbildung eines Briefs"></a>
+                    </div>
+                    <a id="datenschutzeinstellungen">Datenschutzeinstellungen ändern</a>
+                </nav>
+            </div>
+            <hr>
+            <p class="copyright">© <span class="currentYear">2026</span> Handstands Vienna | Alle Rechte vorbehalten.
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>

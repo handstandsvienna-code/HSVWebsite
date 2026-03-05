@@ -1,0 +1,614 @@
+:root {
+  /* bg-colors */
+  --landing-bg-color: rgb(29, 28, 28);
+  --sellingpoint-bg-color: rgb(25, 45, 58);
+  --infos-bg-color: rgb(44, 44, 44);
+  --trainingPlan-bg-color: rgb(39, 26, 41);
+  --eversports-bg-color: rgb(31, 34, 51);
+  --faqs-bg-color: rgb(12, 53, 54);
+  --faqs-container-color: rgb(216, 213, 213);
+  --footer-bg-color: rgb(29, 28, 28);
+
+  /* text-colors */
+  --text-color1: rgb(255, 255, 255);
+  --text-color2: rgb(9, 71, 122);
+  --text-color3: black;
+
+  /* font family */
+  /* --ff1: default; */
+  --ff2: sans-serif;
+
+  /* font size */
+
+  --fontsize-xxs: 0.75rem;
+  --fontsize-xs: 1rem;
+  --fontsize-s: 1.5rem;
+  --fontsize-m: 2rem;
+  --fontsize-l: 2.5rem;
+  --fontsize-xl: 3rem;
+  --fontsize-xxl: 3.5rem;
+
+  /* spacing */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 0.75rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --spacing-xxxl: 3.5rem;
+}
+
+/* general styling */
+
+body {
+  background-color: black;
+  margin: 0;
+  color: var(--text-color1);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: rgb(29, 28, 28);
+}
+
+h2 {
+  font-family: var(--ff2);
+  font-size: var(--fontsize-l);
+}
+
+.section-container {
+  text-align: center;
+  display: flex;
+  max-width: 60%;
+  margin: auto;
+}
+.section-item {
+  margin: auto;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  min-width: 300px;
+  text-align: center;
+  max-width: 90%;
+}
+
+button {
+  width: 7rem;
+  height: 2.5rem;
+  margin-top: var(--spacing-m);
+  border-radius: 8px;
+  background-color: rgb(72, 126, 164);
+  border-color: rgb(72, 126, 164);
+  color: var(--text-color1);
+  font-size: var(--fontsize-xs);
+}
+
+button:hover {
+  background-color: rgb(56, 97, 126);
+  border-color: rgb(40, 71, 93);
+  cursor: pointer;
+}
+
+/* Styling landingPage */
+.landingPage {
+  background-color: var(--landing-bg-color);
+}
+.landingPage img {
+  height: auto;
+  max-width: 500px;
+  max-height: 675px;
+  width: 90%;
+  border-radius: 8px;
+}
+.landingPage p {
+  font-size: var(--fontsize-m);
+  text-align: center;
+  line-height: var(--spacing-xxl);
+}
+
+.landingPage button {
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  img {
+    max-width: 90%;
+  }
+
+  h3 {
+    line-height: var(--spacing-xl);
+  }
+}
+
+/*Styling sellingPoint*/
+
+.sellingPoint {
+  background-color: var(--sellingpoint-bg-color);
+}
+
+.sellingPoint img {
+  height: auto;
+  max-width: 500px;
+  max-height: 700px;
+  width: 90%;
+  border-radius: 8px;
+}
+
+.sellingPoint li {
+  list-style: circle;
+  text-align: left;
+  font-size: var(--fontsize-s);
+  line-height: var(--spacing-xxl);
+  font-family: var(--ff2);
+}
+
+.sellingPoint .section-item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*Styling infos*/
+.infos {
+  background-color: var(--infos-bg-color);
+}
+
+.info-value {
+  text-align: right;
+}
+
+.probeTraining {
+  font-weight: bold;
+}
+
+.infosLocation {
+  margin-top: 4rem;
+}
+
+/*Styling Jahrestrainingsplan*/
+
+.jahrestrainingsplan {
+  background-color: var(--trainingPlan-bg-color);
+}
+
+.infoSchwerpunkte {
+  text-align: center;
+}
+
+#monatTitel {
+  text-decoration: underline;
+  margin-top: 4rem;
+}
+
+.thema {
+  text-align: right;
+}
+
+/*Styling eversports*/
+.eversports {
+  background-color: var(--eversports-bg-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: var(--spacing-s);
+  color: var(--text-color1);
+  text-align: left;
+  font-size: var(--fontsize-s);
+  font-family: var(--ff2);
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 1000px) {
+  .section-item {
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: var(--fontsize-m);
+  }
+
+  td {
+    padding: var(--spacing-xs);
+    font-size: var(--fontsize-s);
+  }
+}
+
+@media (max-width: 480px) {
+  td {
+    font-size: var(--fontsize-xs);
+  }
+
+  h2 {
+    font-size: var(--fontsize-m);
+  }
+}
+
+/*Styling faqs*/
+.faqs {
+  background-color: var(--faqs-bg-color);
+}
+
+.faqs a {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.mail {
+  margin-bottom: -0.2rem;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mail-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.mailFaqs {
+  width: 1.5rem;
+  display: block;
+}
+
+p {
+  text-align: left;
+  font-family: var(--ff2);
+  font-size: var(--fontsize-s);
+  color: white;
+}
+
+.faq-container {
+  margin: auto;
+  max-width: 60rem;
+  margin-top: var(--spacing-xs);
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--faqs-container-color);
+  box-shadow: 1px 2px 3px rgba(9, 71, 122, 0.3);
+}
+
+.faq-item {
+  background-color: var(--faqs-container-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  font-family: var(--ff2);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: var(--faqs-container-color);
+  box-shadow: none;
+  color: var(--text-color2);
+  padding: 1rem;
+}
+.question.active {
+  color: var(--text-color2);
+}
+
+.active-indicator {
+  font-size: var(--fontsize-s);
+  color: inherit !important;
+  margin: 0rem 1rem;
+}
+
+.answer {
+  background-color: var(--faqs-container-color);
+  color: var(--text-color2);
+  overflow: hidden;
+  text-align: left;
+  max-height: 0;
+  padding: 0 1.5rem;
+
+  transform: translateY(-0.5rem);
+  transition:
+    max-height 0.4s ease,
+    transform 0.7s ease,
+    padding 0.3s ease;
+}
+
+.answer.active {
+  max-height: 500px;
+  padding: var(--spacing-xs) 1.5rem;
+
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-0.5rem) translateY(-0.5rem);
+    max-height: 0;
+    padding: 0;
+  }
+
+  to {
+    transform: translateX(0) translateY(0);
+    /* 250 seems to be a good value for a still somewhat smooth transition and no real risk of cutting content right now 
+      -> bigger seem to be worse*/
+    max-height: 250px;
+    padding: var(--spacing-m);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: scale3d(1, 1, 1);
+    /* starting with a lower hight seem to make the transition smoother*/
+    max-height: 100px;
+    padding: var(--spacing-xs);
+  }
+
+  to {
+    transform: scale3d(0.9, 0.9, 0.9);
+    max-height: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mail {
+    margin-bottom: -0.2rem;
+    width: 1.5rem;
+  }
+}
+
+/*Styling footer*/
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+#footer-section-container {
+  display: inline;
+}
+
+#hsv-logo {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100px;
+}
+
+a {
+  font-size: var(--fontsize-xs);
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: white;
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ig {
+  margin-right: 1rem;
+}
+
+.mail {
+  margin-left: 1rem;
+  width: 1.5rem;
+  margin-top: -0.5rem;
+}
+
+.copyright {
+  color: rgba(212, 212, 212, 0.521);
+  text-align: center;
+}
+
+hr {
+  width: 600px;
+  margin-top: 2rem;
+}
+
+/* IMPRESSUM */
+
+.impressumLink {
+  color: white;
+  font-family: var(--ff2);
+  font-size: var(--fontsize-xs);
+  margin: 0.5rem;
+}
+.impressumLink.home {
+  font-size: var(--fontsize-s);
+}
+
+.context {
+  text-align: center;
+}
+
+.linkstyling {
+  color: white;
+  font-size: var(--fontsize-s);
+  line-height: var(--spacing-xl);
+}
+#impressumsection {
+  background-color: black !important;
+}
+#impressumfooter {
+  background-color: black !important;
+  margin-top: -4rem;
+}
+
+/* GUSCHEIN */
+
+.voucher-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.voucher-wrapper {
+  max-width: 90%;
+  margin-left: 5%;
+}
+
+#gutscheinfooter {
+  background-color: black !important;
+}
+
+/* phone */
+
+@media (max-width: 1000px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .section-item {
+    margin: 1rem 0;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: var(--fontsize-m);
+  }
+
+  h3 {
+    font-size: var(--fontsize-s);
+  }
+
+  h4 {
+    font-size: var(--fontsize-s);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: var(--fontsize-s);
+  }
+
+  .infos p {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .landingPage p {
+    font-size: var(--fontsize-s);
+    text-align: center;
+    line-height: var(--spacing-xl);
+  }
+}
+
+/* DATENSCHUTZ */
+
+.cookie-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 998;
+}
+
+.cookie-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 420px;
+  width: calc(100% - 2rem);
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1.25rem;
+  z-index: 999;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.cookie-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.cookie-content a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #9ad0ff;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.cookie-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#cookie-accept {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#cookie-reject {
+  background-color: #333;
+  color: #fff;
+}
+
+.cookie-buttons button:hover {
+  opacity: 0.9;
+}
+
+#datenschutzeinstellungen {
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--ff2);
+}
