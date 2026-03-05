@@ -8,6 +8,14 @@
   --faqs-bg-color: rgb(12, 53, 54);
   --faqs-container-color: rgb(216, 213, 213);
   --footer-bg-color: rgb(29, 28, 28);
+  /* bg-colors-phone */
+
+  --sellingpoint-bg-color-phone: rgb(48, 66, 78);
+  --infos-bg-color-phone: rgb(65, 65, 65);
+  --trainingPlan-bg-color-phone: rgb(61, 49, 62);
+  --eversports-bg-color-phone: rgb(53, 56, 71);
+  --faqs-bg-color-phone: rgb(36, 73, 74);
+  --faqs-container-color-phone: rgb(220, 217, 217);
 
   /* text-colors */
   --text-color1: rgb(255, 255, 255);
@@ -22,11 +30,10 @@
 
   --fontsize-xxs: 0.75rem;
   --fontsize-xs: 1rem;
-  --fontsize-s: 1.5rem;
-  --fontsize-m: 2rem;
-  --fontsize-l: 2.5rem;
-  --fontsize-xl: 3rem;
-  --fontsize-xxl: 3.5rem;
+  --fontsize-s: 1.25rem;
+  --fontsize-m: 1.5rem;
+  --fontsize-l: 1.75rem;
+  --fontsize-xl: 2rem;
 
   /* spacing */
   --spacing-xxs: 0.25rem;
@@ -57,7 +64,7 @@ section {
 
 h2 {
   font-family: var(--ff2);
-  font-size: var(--fontsize-l);
+  font-size: var(--fontsize-xl);
 }
 
 .section-container {
@@ -113,16 +120,6 @@ button:hover {
   font-weight: bold;
 }
 
-@media (max-width: 1000px) {
-  img {
-    max-width: 90%;
-  }
-
-  h3 {
-    line-height: var(--spacing-xl);
-  }
-}
-
 /*Styling sellingPoint*/
 
 .sellingPoint {
@@ -151,6 +148,7 @@ button:hover {
 }
 
 /*Styling infos*/
+
 .infos {
   background-color: var(--infos-bg-color);
 }
@@ -175,6 +173,7 @@ button:hover {
 
 .infoSchwerpunkte {
   text-align: center;
+  font-size: var(--fontsize-s);
 }
 
 #monatTitel {
@@ -187,6 +186,7 @@ button:hover {
 }
 
 /*Styling eversports*/
+
 .eversports {
   background-color: var(--eversports-bg-color);
 }
@@ -209,32 +209,6 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-@media (max-width: 1000px) {
-  .section-item {
-    margin: 1rem 0;
-    max-width: 100%;
-  }
-
-  h2 {
-    font-size: var(--fontsize-m);
-  }
-
-  td {
-    padding: var(--spacing-xs);
-    font-size: var(--fontsize-s);
-  }
-}
-
-@media (max-width: 480px) {
-  td {
-    font-size: var(--fontsize-xs);
-  }
-
-  h2 {
-    font-size: var(--fontsize-m);
-  }
-}
-
 /*Styling faqs*/
 .faqs {
   background-color: var(--faqs-bg-color);
@@ -243,6 +217,10 @@ td {
 .faqs a {
   margin-left: 0;
   padding-left: 0;
+}
+
+.faqs p {
+  text-align: center;
 }
 
 .mail {
@@ -259,6 +237,16 @@ td {
   gap: 0.3rem;
   width: fit-content;
   margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  flex-shrink: 0;
 }
 
 .mailFaqs {
@@ -302,6 +290,7 @@ p {
   color: var(--text-color2);
   padding: 1rem;
 }
+
 .question.active {
   color: var(--text-color2);
 }
@@ -366,13 +355,6 @@ p {
   }
 }
 
-@media (max-width: 1000px) {
-  .mail {
-    margin-bottom: -0.2rem;
-    width: 1.5rem;
-  }
-}
-
 /*Styling footer*/
 .footer {
   background-color: var(--footer-bg-color);
@@ -430,6 +412,7 @@ a {
 .copyright {
   color: rgba(212, 212, 212, 0.521);
   text-align: center;
+  font-size: var(--fontsize-xxs);
 }
 
 hr {
@@ -483,56 +466,6 @@ hr {
   background-color: black !important;
 }
 
-/* phone */
-
-@media (max-width: 1000px) {
-  section {
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 1.5rem;
-  }
-
-  .section-container {
-    flex-direction: column;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .section-item {
-    margin: 1rem 0;
-    min-width: unset;
-    max-width: 100%;
-  }
-
-  h2 {
-    font-size: var(--fontsize-m);
-  }
-
-  h3 {
-    font-size: var(--fontsize-s);
-  }
-
-  h4 {
-    font-size: var(--fontsize-s);
-    line-height: 1.5;
-  }
-
-  p {
-    font-size: var(--fontsize-s);
-  }
-
-  .infos p {
-    margin-top: 4rem;
-    text-align: center;
-  }
-
-  .landingPage p {
-    font-size: var(--fontsize-s);
-    text-align: center;
-    line-height: var(--spacing-xl);
-  }
-}
-
 /* DATENSCHUTZ */
 
 .cookie-overlay {
@@ -563,6 +496,7 @@ hr {
 .cookie-content h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
+  font-family: var(--ff2);
 }
 
 .cookie-content p {
@@ -576,6 +510,8 @@ hr {
   margin-bottom: 1rem;
   font-size: 0.85rem;
   color: #9ad0ff;
+  font-family: var(--ff2);
+
   text-decoration: underline;
 }
 
@@ -611,4 +547,84 @@ hr {
   cursor: pointer;
   text-decoration: underline;
   font-family: var(--ff2);
+}
+
+/* phone */
+
+@media (max-width: 1000px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .section-item {
+    margin: 1rem 0;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: var(--fontsize-m);
+  }
+
+  h3 {
+    font-size: var(--fontsize-s);
+    line-height: var(--spacing-xl);
+  }
+
+  h4 {
+    font-size: var(--fontsize-s);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: var(--fontsize-s);
+  }
+
+  .infos p {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .landingPage p {
+    font-size: var(--fontsize-s);
+    text-align: center;
+    line-height: var(--spacing-xl);
+  }
+  img {
+    max-width: 90%;
+  }
+
+  td {
+    padding: var(--spacing-xs);
+    font-size: var(--fontsize-s);
+  }
+  .mail {
+    margin-bottom: -0.2rem;
+    width: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  td {
+    font-size: var(--fontsize-xs);
+  }
+
+  h2 {
+    font-size: var(--fontsize-m);
+  }
+  .faqs {
+    background-color: var(--faqs-bg-color-phone);
+  }
+  .sellingPoint li {
+    font-size: var(--fontsize-xs);
+    line-height: 1.75rem;
+  }
 }

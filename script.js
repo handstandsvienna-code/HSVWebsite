@@ -30,7 +30,8 @@ const FAQs = [
       "Mittlerweile gibt es diesen Verein schon einige Jahre und wir konnten diverse Kontakte zu namhaften Handstand-Artist*innen knüpfen. Diese laden wir nach Möglichkeit ein, um eine Stunde (Gasttraining) zu halten.",
   },
   {
-    question: "Gibt es die Möglichkeit Gutscheine zu kaufen?",
+    question:
+      "Gibt es die Möglichkeit einen Gutschein (als Geschenk) zu kaufen?",
     answer: `Ja. Wenn du einen Gutschein kaufen möchtest, klicke einfach <a href="./gutscheine.html">hier</a>!`,
   },
 ];
