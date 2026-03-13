@@ -309,3 +309,4 @@ document.getElementById("donnerstag").textContent = data.donnerstag;
 document.getElementById("samstag").textContent = data.samstag;
 
 //Test3
+//testMarOfen
