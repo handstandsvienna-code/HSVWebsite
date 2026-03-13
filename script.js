@@ -308,5 +308,5 @@ document.getElementById("montag").textContent = data.montag;
 document.getElementById("donnerstag").textContent = data.donnerstag;
 document.getElementById("samstag").textContent = data.samstag;
 
-//Test4
+//Test
 //testMarOfen
