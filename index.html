@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <!--<script src="cookies.js" defer></script>-->
+    <script src="navigation.js" defer></script>
+    <script src="cookies.js" defer></script>
+    <script src="FAQs.js" defer></script>
+    <script src="JTP.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/HsvLogocircle_BG_black_transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>HandstandsVienna</title>
 </head>
 
@@ -34,6 +37,52 @@
         </div>
     </div>
     <header>
+        <!-- NavBar -->
+        <div class="topnav">
+            <div class="topnavInner">
+                <div class="canvasNavigation" id="canvasNavigation">
+                    <a href="./index.html">Home</a>
+                    <!-- <a href="" class="active">Events</a>
+                    <a href="" class="active">About us</a> -->
+                    <a href="./gutscheine.html" class="active">Gutscheine</a>
+                    <a href="./impressum.html" class="active">Impressum</a>
+                </div>
+                <div id="hamburgerNavWrapper" onclick="toggleNavOverlay()">
+                    <div class="hamburgerNav" id="hamburgerNavId">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navOverlayContainer">
+            <div id="navOverlayCloseBtn" onclick="toggleNavOverlay()">
+                <span class="span4"></span>
+                <span class="span5"></span>
+            </div>
+            <div id="navLogoContainer">
+                <a href="./index.html"><img id="overlayLogo" src="assets/images/HsvLogosquare_transparent_fixed.png"
+                        alt="Vereinslogo"></a>
+            </div>
+            <div id="navOverlayLinksWrapper">
+                <div id="navOverlayLinks">
+                    <a href="./index.html">Home</a>
+                    <!-- <a href="" class="active">Events</a>
+                    <a href="" class="active">About us</a> -->
+                    <a href="./gutscheine.html" class="active">Gutscheine</a>
+                    <a href="./impressum.html" class="active">Impressum</a>
+
+                    <div class="buttonContainer">
+                        <a href="https://www.eversports.at/scl/handstands-vienna">
+                            <button class="button">Probetraining</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="landingPage">
             <div class="section-container">
                 <div class="section-item">
@@ -44,7 +93,11 @@
                         <br>
                         Auch komplette Anfänger sind bei uns herzlich willkommen!
                     </p>
-                    <!-- <a href="https://www.eversports.at/s/handstands-vienna" class="button"> Zur Anmeldung</a> -->
+                    <div class="buttonContainer">
+                        <a href="https://www.eversports.at/scl/handstands-vienna">
+                            <button class="button">Probetraining</button>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -124,7 +177,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <a href="https://www.eversports.at/s/handstands-vienna" class="button"> Zur Anmeldung</a> -->
 
         </section>
 
@@ -162,22 +214,6 @@
             </div>
         </section>
 
-        <!-- <section class="eversports">
-            <div class="section-container">
-                <div class="section-item">
-                    <div class="section-item">
-                        <h2>Wir sind auch auf Eversports!</h2>
-                        <p>Mit dieser Übersicht kommst du direkt zur Anmeldung:</p>
-                        <div class="widgetWrapper">
-                            <div id="widgetWrapperId"> -->
-        <!--<div data-eversports-widget-id="fa96ca77-1129-4e00-b0b6-ce610c4325ef"></div>-->
-        <!-- </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <section class="faqs">
             <div class="section-container">
                 <div class="section-item">
@@ -201,6 +237,11 @@
                     </p>
                     <div id="faq-container">
                         <!-- FAQ Items werden hier per JS eingefügt -->
+                    </div>
+                    <div class="buttonContainer">
+                        <a href="https://www.eversports.at/scl/handstands-vienna">
+                            <button class="button">Probetraining</button>
+                        </a>
                     </div>
                 </div>
             </div>

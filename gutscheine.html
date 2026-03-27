@@ -7,24 +7,93 @@
     <title>Gutscheine</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/HsvLogocircle_BG_black_transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="navigation.js" defer></script>
     <script src="cookies.js" defer></script>
     <!--<script type="module" src="https://widget-static.eversports.io/loader.js" async defer></script>-->
 </head>
 
 <body>
-    <header>
-        <div class="section-item">
-            <img class="sidePageHeader" src="assets/images/HsvLogosquare_transparent_noCircle.png" alt="Vereinslogo">
+    <!-- Cookie overlay/banner -->
+    <div id="cookie-overlay" class="cookie-overlay" aria-hidden="true"></div>
+    <div id="cookie-banner" class="cookie-container" role="dialog" aria-modal="true" aria-labelledby="cookie-title"
+        aria-describedby="cookie-desc">
+        <div class="cookie-content">
+            <h3>Datenschutz-Präferenzen</h3>
+            <p>
+                Für die Kursanmeldung nutzen wir ein externes Buchungssystem (Eversports).
+                Dabei werden technisch notwendige Cookies des Drittanbieters verwendet, um die Anmeldung zu
+                ermöglichen.
+                Ohne deine Zustimmung kann das Anmelde-Widget nicht geladen werden.
+                Deine Auswahl kannst du jederzeit über den Link am Ende der Website ändern.
+            </p>
+            <a href="assets/pdf/DatenschutzHsv.pdf" target="_blank" rel="noopener noreferrer">Hier erfährst Du mehr
+                zu unseren Datenschutzbestimmungen</a>
+            <div class="cookie-buttons">
+                <button id="cookie-accept">Akzeptieren</button>
+                <button id="cookie-reject">Ablehnen</button>
+            </div>
         </div>
-        <h2 class="voucher-title">
-            Hier findest du die Möglichkeit, Gutscheine zu kaufen:
-        </h2>
+    </div>
+    <header>
+        <!-- NavBar -->
+        <div class="topnav">
+            <div class="topnavInner">
+                <div class="canvasNavigation">
+                    <a href="./index.html">Home</a>
+                    <!-- <a href="" class="active">Events</a>
+                    <a href="" class="active">About us</a> -->
+                    <a href="./gutscheine.html" class="active">Gutscheine</a>
+                    <a href="./impressum.html" class="active">Impressum</a>
+                </div>
+                <div id="hamburgerNavWrapper" onclick="toggleNavOverlay()">
+                    <div class="hamburgerNav" id="hamburgerNavId">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navOverlayContainer">
+            <div id="navOverlayCloseBtn" onclick="toggleNavOverlay()">
+                <span class="span4"></span>
+                <span class="span5"></span>
+            </div>
+            <div>
+                <a href="./index.html"><img id="overlayLogo" src="assets/images/HsvLogosquare_transparent_fixed.png"
+                        alt="Vereinslogo"></a>
+            </div>
+            <div id="navOverlayLinks">
+                <a href="./index.html">Home</a>
+                <!-- <a href="" class="active">Events</a>
+                <a href="" class="active">About us</a> -->
+                <a href="./gutscheine.html" class="active">Gutscheine</a>
+                <a href="./impressum.html" class="active">Impressum</a>
+
+                <div class="buttonContainer">
+                    <button class="button">Probetraining</button>
+                </div>
+            </div>
+        </div>
+        <section class="landingPage">
+            <div class="section-item">
+                <img class="sidePageHeader" src="assets/images/HsvLogosquare_transparent_noCircle.png"
+                    alt="Vereinslogo">
+            </div>
+        </section>
     </header>
 
     <main>
-        <div class="voucher-wrapper">
-            <div class="voucher-content">
-                <div data-eversports-widget-id="daeab0a1-fa95-4f2d-90b2-f20837c14437"></div>
+        <div class="sellingPoint" id="voucherOuterWrapper">
+            <h2 class="voucher-title">
+                Hier findest du die Möglichkeit, Gutscheine zu kaufen:
+            </h2>
+            <div class="voucher-wrapper">
+                <div class="voucher-content" id="voucher-content">
+                    <div data-eversports-widget-id="daeab0a1-fa95-4f2d-90b2-f20837c14437"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -44,6 +113,7 @@
                         <a href="mailto:handstandsvienna@gmail.com">
                             <img class="mail" src="assets/icons/icons8-email-50.png" alt="Abbildung eines Briefs"></a>
                     </div>
+                    <a id="datenschutzeinstellungen">Datenschutzeinstellungen ändern</a>
                 </nav>
             </div>
             <hr>
